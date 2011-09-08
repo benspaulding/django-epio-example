@@ -1,0 +1,43 @@
+[
+    {
+        "pk": 1,
+         "model": "things.thing",
+         "fields": 
+        {
+            "description": "An old idea, but always a good one.",
+             "created": "2011-08-20 15:04:53",
+             "image": "",
+             "modified": "2011-08-20 15:55:08",
+             "slug": "book",
+             "name": "Book"
+        }
+    },
+     
+    {
+        "pk": 2,
+         "model": "things.thing",
+         "fields": 
+        {
+            "description": "Expensive, but generally worth it. :)",
+             "created": "2011-08-20 15:06:20",
+             "image": "",
+             "modified": "2011-08-20 17:37:04",
+             "slug": "house",
+             "name": "House"
+        }
+    },
+     
+    {
+        "pk": 3,
+         "model": "things.thing",
+         "fields": 
+        {
+            "description": "Tons of fun, but not for everybody.",
+             "created": "2011-08-22 09:45:39",
+             "image": "",
+             "modified": "2011-08-22 09:45:39",
+             "slug": "motorcycle",
+             "name": "Motorcycle"
+        }
+    }
+]

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load future %}
+
+{% block subtitle %}{{ thing.name }}{% endblock %}
+
+{% block classes %}thing-detail{% endblock %}
+
+{% block content %}
+  <h1>{{ thing.name }}</h1>
+
+  {% if thing.image %}
+    <figure>
+      <img src="{{ thing.image.url }}" width="{{ thing.image.width }}" height="{{ thing.image.height }}" alt="{{ thing.name }}">
+    </figure>
+  {% endif %}
+
+  <p>{{ thing.description }}
+
+  <p><a href="{% url "things-thing-index" %}">‹ All Things</a>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load future %}
+
+
+{% block subtitle %}Page not found{% endblock %}
+
+{% block classes %}error-404{% endblock %}
+
+{% block content %}
+  <h1>Page not found</h1>
+
+  <p>I’m sorry, but the page you’re looking for is not here.
+
+  <p>If you feel this is my fault, please <a href="{% url "flatpage" "contact/" %}">let me know</a>.
+     Otherwise, you may find what you’re looking for by
+     <a rel="search" href="{% url "haystack_search" %}">searching</a> for it.
+{% endblock %}

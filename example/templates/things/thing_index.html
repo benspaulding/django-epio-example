@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block subtitle %}Things{% endblock %}
+
+{% block classes %}thing-index{% endblock %}
+
+{% block content %}
+  <h1>Things</h1>
+  <ol start="{{ page.start_index }}">
+    {% for thing in thing_list %}
+      <li><a href="{{ thing.get_absolute_url }}">{{ thing.name }}</a>
+    {% endfor %}
+  </ol>
+{% endblock %}

@@ -1,0 +1,29 @@
+body {
+    background-color: #fefefe;
+    }
+
+nav form,
+nav fieldset {
+    display: inline;
+    }
+
+footer {
+    font-size: .75em;
+    padding-top: 2em;
+    }
+nav ul,
+footer ul {
+    padding-left: 0;
+    }
+nav ul li,
+footer ul li {
+    display: inline;
+    padding-right: 1em;
+    }
+footer small {
+    padding-top: 1em;
+    }
+
+#search-form-full li {
+    display: block;
+    }

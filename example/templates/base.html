@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="utf-8">
+<title>{% block title %}{% block subtitle %}{% endblock %} | ep.io Example{% endblock %}</title>
+
+{% load compress %}
+{% load future %}
+
+<!--[if gt IE 6]><!-->
+{% compress css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}main.css">
+{% endcompress %}
+<!--<![endif]-->
+
+<link rel="home" href="{% url "home" %}">
+<link rel="up" href="../">
+<link rel="search" href="{% url "haystack_search" %}">
+
+{% block links %}{% endblock %}
+
+<!--[if lt IE 9]> {# http://remysharp.com/2009/01/07/html5-enabling-script/ #}
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<header>
+  <h1><a href="{% url "home" %}">ep.io Example</a></h1>
+  <p>An ep.io test site</p>
+  <nav>
+    <ul>
+      <li><a href="{% url "home" %}">Home</a>
+      <li><a href="{% url "things-thing-index" %}">Things</a>
+      <li>
+        <form id="search-form" action="{% url "haystack_search" %}" method="get" accept-charset="utf-8"`>
+          <fieldset>
+            <label for="q">Search</label>
+            <input type="search" id="q" name="q" placeholder="Search" value="{{ request.GET.q }}">
+            <button type="submit">Go</button>
+          </fieldset>
+        </form>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<hr>
+
+<div id="content" class="{% block classes %}{% endblock %}">
+  {% block content %}
+  {% endblock %}
+</div>
+
+<hr>
+
+<footer id="site-footer">
+  <nav>
+    <ul>
+      <li><a href="{% url "home" %}">Home</a>
+      <li><a href="{% url "things-thing-index" %}">Things</a>
+      <li><a rel="search" href="{% url "haystack_search" %}" title="Search the contents of this site">Search</a>
+    </ul>
+  </nav>
+
+  <small>
+    Copyright © 2010–{% now "Y" %}, Ben Spaulding.
+    All rights reserved.
+  </small>
+</footer>
+
+<!--[if gt IE 6]><!-->
+{% compress js %}
+<script src="{{ STATIC_URL }}jquery.min.js"></script>
+<script src="{{ STATIC_URL }}main.js"></script>
+{% endcompress %}
+<!--<![endif]-->
