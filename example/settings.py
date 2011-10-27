@@ -13,7 +13,7 @@ except ImportError:
 # Use this to point to media and template resources in our project.
 PROJ_ROOT = os.path.dirname(os.path.realpath(__file__))
 
-# A writable storage area is location at ~/data/
+# A writable storage area is located at ~/data/
 # See https://www.ep.io/docs/importexport/#writable-storage
 DATA_DIR = config['core']['data_directory']
 
