@@ -7,6 +7,10 @@
 What is this?
 -------------
 
+.. note:: ep.io_ has shutdown_, so this isn’t exactly useful anymore. :(
+
+.. _shutdown: https://www.ep.io/blog/epio-closing-down/
+
 ep.io_ is a painless, powerful Python/Django hosting service. This is a
 simple example of how to set up an application using their free plan.
 It includes:
